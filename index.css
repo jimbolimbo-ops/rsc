@@ -1,0 +1,137 @@
+/* =========================
+   INDEX PAGE STYLES
+   Specific styling for the homepage only
+========================== */
+
+/* Hero section with the background image and overlay */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url("images/stream.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-content {
+  max-width: 900px;
+  color: white;
+  padding-top: 60px;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  margin-bottom: 25px;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  line-height: 1.7;
+  margin-bottom: 40px;
+  text-shadow: 0 3px 12px rgba(0,0,0,0.45);
+}
+
+/* About section styling */
+.about {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+  align-items: center;
+    text-align: center;
+
+}
+
+.about iframe {
+  border-radius: 30px;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.about-text h2 {
+  color: var(--brand-black);
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 25px;
+}
+
+.about-text p {
+  line-height: 1.9;
+  margin-bottom: 20px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+/* Contact card and map styling */
+.contact-box {
+  background: var(--brand-gold);
+  color: var(--brand-black);
+  padding: 60px 30px;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+}
+
+.contact-box h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 25px;
+}
+
+.map-container {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.map-container iframe {
+  width: 100%;
+  min-height: 280px;
+  border: 0;
+  display: block;
+}
+
+.contact-box p {
+  margin: 12px 0;
+  font-size: 1.1rem;
+}
+
+/* Index-specific responsive adjustments */
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 120px;
+  }
+
+  .hero-content {
+    padding-top: 40px;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 70px 6%;
+  }
+
+  .map-container iframe {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-box {
+    padding: 45px 20px;
+  }
+}

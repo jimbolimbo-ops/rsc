@@ -1,0 +1,228 @@
+/* =========================
+   MENU PAGE STYLES
+========================== */
+
+/* Page container */
+.menu-page {
+  min-height: 100vh;
+  background: var(--bg);
+  padding-top: 100px;
+}
+
+/* Main container */
+.menu-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.menu-title {
+  text-align: center;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: var(--brand-black);
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* =========================
+   MENU CATEGORIES
+========================== */
+
+.menu-category {
+  margin-bottom: 80px;
+}
+
+.category-title {
+  font-size: 2rem;
+  color: var(--brand-pink);
+  margin-bottom: 30px;
+  border-bottom: 3px solid var(--brand-gold);
+  padding-bottom: 15px;
+  text-transform: uppercase;
+}
+
+/* =========================
+   MENU GRID ITEMS
+========================== */
+
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.menu-item {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid rgba(231, 7, 123, 0.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.menu-item h3 {
+  font-size: 1.4rem;
+  color: var(--brand-black);
+  margin-bottom: 10px;
+}
+
+.menu-item-price {
+  font-size: 1.2rem;
+  color: var(--brand-gold);
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.menu-item-description {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* =========================
+   SPECIALTY SECTION WRAPPER
+========================== */
+
+#specials {
+  margin-bottom: 140px; /* FIXED spacing issue */
+}
+
+/* Center container */
+.special-items {
+  display: flex;
+  justify-content: center;
+}
+
+/* =========================
+   SPECIAL ITEM CARD
+========================== */
+
+.special-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  border: 1px solid rgba(231, 7, 123, 0.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Text wrapper (IMPORTANT FIX) */
+.special-item-text {
+  max-width: 500px;
+}
+
+/* Image LEFT */
+.special-item-image {
+  width: 100%;
+  max-width: 500px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 18px;
+  flex-shrink: 0;
+}
+
+/* Text styles */
+.special-item-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: var(--brand-black);
+}
+
+.special-item-price {
+  font-size: 1.3rem;
+  color: var(--brand-gold);
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.special-item-description {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* =========================
+   FEATURED BADGE
+========================== */
+
+.special-item.featured {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid rgba(255, 183, 3, 0.35);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.special-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+
+  background: var(--brand-pink);
+  color: white;
+  font-size: 0.85rem;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  z-index: 5;
+}
+
+/* Hover zoom */
+.special-item.featured .special-item-image {
+  transition: transform 0.3s ease;
+}
+
+.special-item.featured:hover .special-item-image {
+  transform: scale(1.05);
+}
+
+/* =========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 768px) {
+
+  .menu-container {
+    padding: 40px 15px;
+  }
+
+  .menu-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .category-title {
+    font-size: 1.5rem;
+  }
+
+  .menu-items {
+    grid-template-columns: 1fr;
+  }
+
+  /* Special layout stacks */
+  .special-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .special-item-image {
+    height: 300px;
+  }
+
+  .special-item-text {
+    max-width: 100%;
+  }
+}

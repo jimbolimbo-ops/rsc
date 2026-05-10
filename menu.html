@@ -1,161 +1,212 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--
-    Rolling Stone Creamery Website
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menu - Rolling Stone Creamery</title>
 
-    Author:  James Harkelroad
-    Date:    December 8, 2024
-    Filename: menu.html
-   -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Rolling Stone Creamery</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="images/icon.ico" type="image/x-icon">
-
-    <style>
-        #choc{
-            height: 10%;
-            width: 10%;
-            min-height: 70px;
-            min-width: 70px;
-        }
-        #strawberry{
-            height: 12%;
-            width: 12%;
-            min-height: 70x;
-            min-width: 70px;
-        }
-
-        #menu-title {
-            width: 50%;
-            text-align: center;  
-            display: flex;  
-            justify-content: center; 
-            align-items: center;
-            margin: 0 auto; 
-        }
-
-        #menu-title > h2 {
-            font-size: 3rem;
-            margin: 1em;
-        }
-
-        .menu-info {
-            padding: 2rem;
-        }
-
-        .menu-grid {
-            display: flex; 
-            flex-wrap: wrap; 
-            gap: 2rem; 
-            margin: 2rem 0;
-        }
-
-        .menu-item {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            text-align: center;
-            flex-grow: 1;
-            flex-shrink: 1;
-            flex-basis: 300px;
-        }
-    </style>
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="menu.css">
+  <link rel="icon" href="images/icon.ico" type="image/x-icon">
 </head>
+
 <body>
-    <header>
-        <div id="head-content">
-            <img src="images/halfLogo.png" alt="The Rolling Stone Creamery Logo" id="headLogo">
-            <details>
-                <summary><img src="images/nav-bar.png" id="nav-bar"></summary>
-                <a href="index.html">ABOUT</a><br/>
-                <a href="menu.html">MENU</a><br/>
-                <a href="location.html">LOCATION </a><br/>
-                <a href="contact.html">CONTACT</a>
-              </details>
-            <nav class="navbar">
-                <a href="index.html">ABOUT</a>
-                <a href="menu.html">MENU</a>
-                <a href="location.html">LOCATION </a>
-                <a href="contact.html">CONTACT</a>
-            </nav>
-        </div>
-    </header>
+  <!-- =========================
+       NAVBAR
+  ========================== -->
 
-    <main>
-        <section class="menu-info">
-            <div id="menu-title">
-                <img src="images/strawberry.png" alt="chocolate icecream" id="strawberry" class="icecream" />
-                <h2 style="color:white"> Ice Cream Menu</h2>
-                <img src="images/choc.png" alt="chocolate icecream" id="choc" class="icecream" />
-            </div>
+  <header>
+    <div class="logo">
+      The Rolling Stone Creamery
+    </div>
+
+    <nav>
+      <a href="index.html#home">Home</a>
+      <a href="menu.html#flavors">Menu</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+
+  </header>
+
+
+  <!-- =========================
+       MENU PAGE
+  ========================== -->
+
+  <div class="menu-page">
+        <!-- Specialty of the Month -->
+        <div class="menu-container">
+
+            <div class="special-item featured" id="specials">
             
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <h3>Classic Flavors</h3>
-                    <p>Vanilla Bean</p>
-                    <p>Rich Chocolate</p>
-                    <p>Fresh Strawberry</p>
-                    <p>Single $3.50 | Double $5.00</p>
-                </div>
-                
-                <div class="menu-item">
-                    <h3>Premium Flavors</h3>
-                    <p>Lighthouse Special</p>
-                    <p>Lake Erie Breeze</p>
-                    <p>Pier Paradise</p>
-                    <p>Single $4.00 | Double $5.50</p>
-                </div>
-                
-                <div class="menu-item">
-                    <h3>Signature Sundaes</h3>
-                    <p>Lighthouse Tower</p>
-                    <p>Sunset Special</p>
-                    <p>Beach Blast</p>
-                    <p>Starting at $6.50</p>
-                </div>
+            <span class="special-badge">Special of the Month</span>
+            <img class="special-item-image" src="images/shores.jpg" alt="Smores on the Shores rolled ice cream">
+            <div class="special-item-text">
+                <h3>Smores on the Shores</h3>
+                <div class="special-item-price">$8.49</div>
+                <p class="special-item-description">
+                Fresh strawberry cream blended with berries, whipped topping, and sweet strawberry drizzle.
+                </p>
             </div>
 
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <h3>Toppings</h3>
-                    <p>Sprinkles</p>
-                    <p>Hot Fudge</p>
-                    <p>Whipped Cream</p>
-                    <p>$.50 each</p>
-                </div>
-                
-                <div class="menu-item">
-                    <h3>Specialty Toppings</h3>
-                    <p>Candied Pecans</p>
-                    <p>Local Maple Syrup</p>
-                    <p>Fresh Berries</p>
-                    <p>$1.00 each</p>
-                </div>
-                
-                <div class="menu-item">
-                    <h3>Extras</h3>
-                    <p>Waffle Cone $1.00</p>
-                    <p>Extra Scoop $2.00</p>
-                    <p>Take-Home Pint $6.00</p>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-    <footer>
-        <aside class="foot-content">
-            <img src="images/logo.png" alt="The Rolling Stone Creamery Logo" class="foot-logo">
-            <div class = "foot-copyright">        
-                <p>The Rolling Stone Creamery</p>
-                <p>Located at the Lighthouse Pier | Huron, Ohio</p>
-                <p>&copy; 2024 The Rolling Stone Creamery. All rights reserved.</p>
-            </div>
-        </aside>
-    </footer>
+        </div>
+
+      <!-- ROLLED ICE CREAM -->
+      <div class="menu-category">
+
+        <h2 class="category-title">🍦 Rolled Ice Cream</h2>
+
+        <div class="menu-items">
+
+          <div class="menu-item">
+            <h3>Chocolate Madness</h3>
+            <div class="menu-item-price">$7.99</div>
+            <p class="menu-item-description">Rich chocolate rolled ice cream topped with brownie bites, fudge drizzle, and chocolate curls.</p>
+          </div>
+
+          <div class="menu-item">
+            <h3>Smores on the Shores</h3>
+            <div class="menu-item-price">$8.49</div>
+            <p class="menu-item-description">Fresh strawberry cream blended with berries, whipped topping, and sweet strawberry drizzle.</p>
+          </div>
+
+          <div class="menu-item">
+            <h3>Classic Vanilla</h3>
+            <div class="menu-item-price">$7.49</div>
+            <p class="menu-item-description">Smooth vanilla bean ice cream finished with caramel, cookie crunch, and creamy whipped topping.</p>
+          </div>
+
+          <div class="menu-item">
+            <h3>Pistachio Dream</h3>
+            <div class="menu-item-price">$8.49</div>
+            <p class="menu-item-description">Creamy pistachio ice cream with crushed pistachios, white chocolate, and a drizzle of honey.</p>
+          </div>
+
+          <div class="menu-item">
+            <h3>Mint Chocolate Chip</h3>
+            <div class="menu-item-price">$7.99</div>
+            <p class="menu-item-description">Cool mint ice cream swirled with dark chocolate chips, topped with crushed cookies.</p>
+          </div>
+
+          <div class="menu-item">
+            <h3>Cookie Dough Bliss</h3>
+            <div class="menu-item-price">$8.99</div>
+            <p class="menu-item-description">Vanilla ice cream rolled with real cookie dough chunks, topped with chocolate syrup and sprinkles.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- TOPPINGS & ADD-ONS -->
+      <div class="menu-category">
+
+        <h2 class="category-title">✨ Toppings & Add-Ons</h2>
+
+        <div class="menu-items">
+
+          <div class="menu-item">
+            <h3>Fresh Berries</h3>
+            <div class="menu-item-price">+$1.50</div>
+            <p class="menu-item-description">Strawberries, blueberries, raspberries, and blackberries.</p>
+          </div>
+
+          <div class="menu-item">
+            <h3>Chocolate Toppings</h3>
+            <div class="menu-item-price">+$1.25</div>
+            <p class="menu-item-description">Chocolate chips, fudge drizzle, brownie bites, or chocolate shavings.</p>
+          </div>
+
+          <div class="menu-item">
+            <h3>Candy & Cookies</h3>
+            <div class="menu-item-price">+$1.50</div>
+            <p class="menu-item-description">Crushed Oreos, gummy bears, M&Ms, or candy pieces of your choice.</p>
+          </div>
+
+          <div class="menu-item">
+            <h3>Nuts & Granola</h3>
+            <div class="menu-item-price">+$1.25</div>
+            <p class="menu-item-description">Almonds, walnuts, pistachios, or crunchy granola.</p>
+          </div>
+
+          <div class="menu-item">
+            <h3>Syrups & Sauces</h3>
+            <div class="menu-item-price">+$0.75</div>
+            <p class="menu-item-description">Caramel, chocolate, strawberry, or maple syrup drizzles.</p>
+          </div>
+
+          <div class="menu-item">
+            <h3>Whipped Cream</h3>
+            <div class="menu-item-price">+$0.99</div>
+            <p class="menu-item-description">Fresh whipped cream, perfect on any flavor.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- BEVERAGES -->
+      <div class="menu-category">
+
+        <h2 class="category-title">🥤 Beverages</h2>
+
+        <div class="menu-items">
+
+          <div class="menu-item">
+            <h3>Iced Coffee</h3>
+            <div class="menu-item-price">$4.49</div>
+            <p class="menu-item-description">Cold brew coffee served over ice with your choice of cream and sweetener.</p>
+          </div>
+
+          <div class="menu-item">
+            <h3>Milkshakes</h3>
+            <div class="menu-item-price">$5.99</div>
+            <p class="menu-item-description">Creamy milkshakes in any of our ice cream flavors.</p>
+          </div>
+
+          <div class="menu-item">
+            <h3>Smoothies</h3>
+            <div class="menu-item-price">$5.49</div>
+            <p class="menu-item-description">Fresh fruit smoothies blended with yogurt and ice.</p>
+          </div>
+
+          <div class="menu-item">
+            <h3>Fresh Lemonade</h3>
+            <div class="menu-item-price">$3.99</div>
+            <p class="menu-item-description">Freshly made lemonade, perfect on a warm day.</p>
+          </div>
+
+          <div class="menu-item">
+            <h3>Iced Tea</h3>
+            <div class="menu-item-price">$2.99</div>
+            <p class="menu-item-description">Sweet or unsweetened iced tea.</p>
+          </div>
+
+          <div class="menu-item">
+            <h3>Soft Drinks</h3>
+            <div class="menu-item-price">$2.49</div>
+            <p class="menu-item-description">Your favorite sodas and sparkling beverages.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+    © 2026 Rolling Stone Creamery. All Rights Reserved.
+  </footer>
+
 </body>
 </html>
-
