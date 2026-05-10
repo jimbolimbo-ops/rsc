@@ -127,8 +127,8 @@
 /* Image LEFT */
 .special-item-image {
   width: 100%;
-  max-width: 500px;
-  height: 350px;
+  max-width: 350px;
+  height: 450px;
   object-fit: cover;
   border-radius: 18px;
   flex-shrink: 0;
@@ -219,7 +219,7 @@
   }
 
   .special-item-image {
-    height: 300px;
+    height: 450px;
   }
 
   .special-item-text {
